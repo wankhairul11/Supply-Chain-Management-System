@@ -2,6 +2,22 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\WarehouseController;
+use App\Http\Controllers\PurchaseOrderController;
+use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\LocationController;
+
+Route::resource('suppliers', SupplierController::class);
+Route::resource('products', ProductController::class);
+Route::resource('inventories', InventoryController::class);
+Route::resource('warehouses', WarehouseController::class);
+Route::resource('purchaseOrders', PurchaseOrderController::class);
+Route::resource('orderItems', OrderItemController::class);
+Route::resource('locations', LocationController::class);
 
 Route::get('/', function () {
     return view('welcome');
